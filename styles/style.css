@@ -71,7 +71,7 @@ header {
   background: #9ed0db;
   color: #333;
   position: absolute;
-  top: 335px;
+  top: 100px;
 }
 
 .welcome_head {
@@ -91,7 +91,7 @@ header {
   position: relative;
   left: 23px;
   top: 94px;
-  line-height: 0.8;
+  line-height: 1;
 }
 
 .header_social {
@@ -233,7 +233,7 @@ main {
 .product_unit {
   background: #fff;
   width: 270px;
-  height: 320px;
+  height: 340px;
   padding: 10px;
   box-sizing: border-box;
   float: left;
@@ -242,30 +242,6 @@ main {
   position: relative;
 }
 
-.product_unit_new,
-.product_unit_hot {
-  font-size: 9px;
-  font-family: "Roboto Regular", sans-serif;
-  text-transform: uppercase;
-  position: absolute;
-  right: 0;
-  top: 0;
-  width: 45px;
-  height: 45px;
-  text-align: right;
-  padding: 7px 4px 0 0;
-  box-sizing: border-box;
-}
-
-.product_unit_new {
-  color: #fff;
-  background: url("../images/new-corner.png") no-repeat right top;
-}
-
-.product_unit_hot {
-  color: #000;
-  background: url("../images/hot-corner.png") no-repeat right top;
-}
 
 .product_unit:nth-child(3n) {
   margin-right: 0;
@@ -282,11 +258,11 @@ main {
   float: left;
   font-size: 14px;
   font-family: "Roboto Black Italic", sans-serif;
-  max-height: 2.2em;
+  max-height: 5em;
   overflow: hidden;
 }
 
-.product_price {
+.date {
   width: 85px;
   float: right;
   text-align: right;
@@ -295,11 +271,6 @@ main {
   line-height: 0.95;
 }
 
-.product_old_price {
-  font-size: 14px;
-  text-decoration: line-through;
-  color: #e24602;
-}
 
 .brands {
   width: 100%;
@@ -409,108 +380,11 @@ footer {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  padding-top: 43px;
+  /*padding-top: 43px;*/
   box-sizing: border-box;
 }
 
-.footer_unit_head {
-  font-size: 18px;
-  font-family: "Raleway Black", sans-serif;
-  margin-bottom: 30px;
-}
 
-.footer_unit_newsletter_unit {
-  width: 250px;
-}
-
-.footer_unit_newsletter_text {
-  margin-bottom: 20px;
-}
-
-.footer_unit_newsletter_unit input,
-.footer_unit_newsletter_unit button {
-  float: left;
-  height: 30px;
-  line-height: 30px;
-}
-
-.footer_unit_newsletter_unit input {
-  border: none;
-  padding-left: 5px;
-  padding-right: 5px;
-  background: #fff51f;
-  font-family: "Roboto Bold", sans-serif;
-}
-
-.footer_unit_newsletter_unit input:focus,
-.footer_unit_newsletter_unit button:active,
-.footer_unit_newsletter_unit button:focus {
-  outline: none;
-}
-
-.footer_unit_newsletter_unit button {
-  text-transform: uppercase;
-  border: none;
-  background: #000;
-  color: #fff;
-  padding: 0 13px;
-  cursor: pointer;
-  height: 32px;
-}
-
-.footer_unit_newsletter_unit button:hover {
-  background: #fff;
-  color: #000;
-}
-
-.footer_newsletter_payments {
-  float: left;
-  width: 100%;
-  margin-top: 40px;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-}
-
-.footer_about_us_unit {
-  width: 240px;
-}
-
-.footer_about_us_text {
-  text-align: justify;
-}
-
-.footer_phone_label,
-.footer_email_label,
-.footer_phone,
-.footer_email {
-  font-size: 14px;
-}
-
-.footer_phone_label,
-.footer_email_label {
-  margin-top: 15px;
-  float: left;
-  margin-right: 25px;
-}
-
-.footer_phone,
-.footer_email {
-  margin-top: 15px;
-  float: left;
-}
-
-.footer_email {
-  color: #faef03;
-}
-
-.footer_unit_links a {
-  color: #fff;
-  display: block;
-  text-decoration: none;
-  font-family: "Roboto Regular", sans-serif;
-  line-height: 20px;
-}
 
 .copyrights_wrap {
   height: 50px;
