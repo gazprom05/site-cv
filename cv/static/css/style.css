@@ -53,7 +53,7 @@ header {
   width: 100%;
   float: left;
   height: 700px;
-  background: url("../images/index-back1.jpg") no-repeat;
+  background: url("/static/img/index-back1.jpg") no-repeat;
   background-size: cover;
 }
 
@@ -442,7 +442,7 @@ main {
   font-size: 18px;
 }
 
-.instagram_feed_images {
+.instagram_feed_image {
   margin-top: 30px;
   margin-bottom: 50px;
   width: 100%;
