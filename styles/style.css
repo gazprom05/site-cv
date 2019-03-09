@@ -230,7 +230,7 @@ main {
   float: left;
 }
 
-.product_unit {
+.education_unit {
   background: #fff;
   width: 270px;
   height: 340px;
@@ -243,33 +243,150 @@ main {
 }
 
 
-.product_unit:nth-child(3n) {
+.education_unit:nth-child(3n) {
   margin-right: 0;
 }
 
-.product_unit img {
+.education_unit img {
   width: 250px;
   height: 230px;
   margin-bottom: 16px;
 }
 
-.product_name {
-  width: 160px;
+.education_name {
+  width: 240px;
   float: left;
   font-size: 14px;
   font-family: "Roboto Black Italic", sans-serif;
+  text-align: justify;
   max-height: 5em;
   overflow: hidden;
 }
 
-.date {
-  width: 85px;
+.education_date {
   float: right;
   text-align: right;
   font-size: 18px;
   font-family: "Roboto Black Italic", sans-serif;
   line-height: 0.95;
 }
+
+.cert_unit {
+  background: #fff;
+  width: 270px;
+  height: 300px;
+  padding: 10px;
+  box-sizing: border-box;
+  float: left;
+  margin-right: 30px;
+  margin-bottom: 30px;
+  position: relative;
+}
+
+.cert_unit:nth-child(3n) {
+  margin-right: 0;
+}
+
+.cert_unit img {
+  width: 250px;
+  height: 230px;
+  margin-bottom: 6px;
+}
+
+.cert_name {
+  width: 240px;
+  float: left;
+  font-size: 14px;
+  font-family: "Roboto Black Italic", sans-serif;
+  max-height: 3em;
+  overflow: hidden;
+}
+
+.add_edu_unit {
+  background: #fff;
+  width: 270px;
+  height: 380px;
+  padding: 10px;
+  box-sizing: border-box;
+  float: left;
+  margin-right: 30px;
+  margin-bottom: 30px;
+  position: relative;
+}
+
+
+.add_edu_unit:nth-child(3n) {
+  margin-right: 0;
+}
+
+.add_edu_unit img {
+  width: 250px;
+  height: 230px;
+  margin-bottom: 16px;
+}
+
+.add_edu_name {
+  width: 240px;
+  float: left;
+  font-size: 14px;
+  font-family: "Roboto Black Italic", sans-serif;
+  text-align: justify;
+  max-height: 7em;
+  overflow: hidden;
+}
+
+.add_edu_date {
+  float: right;
+  text-align: right;
+  font-size: 18px;
+  font-family: "Roboto Black Italic", sans-serif;
+  line-height: 0.95;
+}
+
+.career_unit {
+    background: #fff;
+    width: 270px;
+    height: 350px;
+    padding: 10px;
+    box-sizing: border-box;
+    float: left;
+    margin-right: 30px;
+    margin-bottom: 30px;
+    position: relative;
+}
+
+.career_unit:nth-child(3n) {
+    margin-right: 0;
+}
+
+.career_unit img {
+    width: 250px;
+    height: 230px;
+    margin-bottom: 16px;
+}
+
+.career_name {
+  width: 240px;
+  float: left;
+  font-size: 14px;
+  font-family: "Roboto Black Italic", sans-serif;
+  text-align: justify;
+  max-height: 5em;
+  overflow: hidden;
+  line-height: 1.9;
+}
+
+.career_date {
+  float: right;
+  text-align: right;
+  font-size: 18px;
+  font-family: "Roboto Black Italic", sans-serif;
+  line-height: 0.95;
+}
+
+
+
+
 
 
 .brands {
@@ -281,6 +398,20 @@ main {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  box-sizing: border-box;
+}
+
+.text_about_me {
+  color: black;
+  font-family: "Roboto Black", sans-serif;
+  font-style: italic;
+  font-size: 16px;
+  text-align: justify;
+  padding: 30px;
+  background: #f8f8f8;
+  margin-bottom: 30px;
+  float: left;
+  width: 100%;
   box-sizing: border-box;
 }
 
@@ -326,30 +457,7 @@ main {
   border: 7px solid #fff;
 }
 
-.big_socials {
-  width: 100%;
-  float: left;
-  height: 150px;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: stretch;
-  box-sizing: border-box;
-}
 
-.big_socials > a {
-  width: 33.3333333333333333%;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  text-decoration: none;
-}
-
-.big_socials > a i {
-  color: #fff;
-  font-size: 4.5rem;
-}
 
 .bs_facebook {
   background: #3b5997;
