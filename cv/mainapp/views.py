@@ -1,8 +1,8 @@
 from django.shortcuts import render
 
+
 # Create your views here.
 def index(request):
-
     edu_agency = [
         {
             'edu_agency_picture': 'img/education/393_logo.png',
@@ -23,9 +23,9 @@ def index(request):
 
     context = {
         'title': 'смолкин дмитрий',
+        'edu_agency': edu_agency,
     }
     return render(request, 'mainapp/index.html', context)
-
 
 
 def error(request):
