@@ -1,13 +1,16 @@
+{% load staticfiles %}
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="utf-8">
   <title>
       {% block title %}
+        {{ title|title }}
       {% endblock %}
   </title>
-  <link rel="stylesheet" href="static/css/style.css">
-  <link rel="stylesheet" href="static/packages/font-awesome-4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+  <link rel="stylesheet" href="{% static 'packages/font-awesome-4.7.0/css/font-awesome.min.css' %}">
 </head>
 <body>
 
@@ -31,13 +34,13 @@
         <a href="https://vk.com/gazprom05" target="_blank">
           <i class="fa fa-vk"></i>
         </a>
-        <a href="/error/" target="_blank">
+        <a href="{% url 'error' %}" target="_blank">
           <i class="fa fa-twitter"></i>
         </a>
         <a href="https://www.youtube.com/channel/UCRNMlS_iaWrs2lJ6AVPdycA?view_as=subscriber" target="_blank">
           <i class="fa fa-youtube"></i>
         </a>
-        <a href="/error/" target="_blank">
+        <a href="{% url 'error' %}" target="_blank">
           <i class="fa fa-instagram"></i>
         </a>
       </div>
