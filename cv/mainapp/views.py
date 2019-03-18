@@ -1,7 +1,10 @@
 from django.shortcuts import render
+from mainapp.models import MenuCategory, Education
 
 # Create your views here.
 def index(request):
+
+    education = Education.objects.all()
 
     edu_agency = [
         {
@@ -88,6 +91,7 @@ def index(request):
         'career': career,
         'add_education': add_education,
         'certificates': certificates,
+        'education': education,
     }
     return render(request, 'mainapp/index.html', context)
 

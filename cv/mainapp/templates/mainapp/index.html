@@ -30,6 +30,10 @@
       </div>
 
       <div class="products_wrap">
+        
+        {% for education in education %}
+        <img src="/media/{{ education.image }}" alt="dsfdsfdsfdsf">
+        {% endfor %}
 
         {% for edu_agency in edu_agency %}
             <div class="education_unit">
