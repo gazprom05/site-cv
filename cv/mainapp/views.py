@@ -1,7 +1,14 @@
 from django.shortcuts import render
+from mainapp.models import MenuCategoryTable, EducationTable, CareerTable, AddEducationTable, CertificatesTable
 
 # Create your views here.
 def index(request):
+
+    menucategory_table = MenuCategoryTable.objects.all()
+    education_table = EducationTable.objects.all()
+    career_table = CareerTable.objects.all()
+    addeducation_table = AddEducationTable.objects.all()
+    certificates_table = CertificatesTable.objects.all()
 
     edu_agency = [
         {
@@ -24,13 +31,13 @@ def index(request):
     career = [
         {
             'company_name': '"Компания Эдвенче"',
-            'company_logo': 'static/img/career/elkus.jpg',
+            'company_logo': 'static/img/career/logo-aero.png',
             'company_position': 'Конструктор',
-            'company_years': '2008 - 2015',
+            'company_years': '2013 - 2015',
         },
         {
             'company_name': 'Электронная компания "Элкус"',
-            'company_logo': 'static/img/career/logo-aero.png',
+            'company_logo': 'static/img/career/elkus.jpg',
             'company_position': 'Инженер-конструктор',
             'company_years': '2015 - 2019',
         },
@@ -88,6 +95,11 @@ def index(request):
         'career': career,
         'add_education': add_education,
         'certificates': certificates,
+        'menucategory_table': menucategory_table,
+        'education_table': education_table,
+        'career_table': career_table,
+        'addeducation_table': addeducation_table,
+        'certificates_table': certificates_table,
     }
     return render(request, 'mainapp/index.html', context)
 
