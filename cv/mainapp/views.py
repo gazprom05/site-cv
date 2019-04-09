@@ -1,8 +1,38 @@
 from django.shortcuts import render
 from mainapp.models import MenuCategoryTable, EducationTable, CareerTable, AddEducationTable, CertificatesTable
+import requests
+import json
+
 
 # Create your views here.
 def index(request):
+    def get_api():
+        get_xml = requests.get(
+            'https://www.cbr-xml-daily.ru/daily_json.js')
+        if get_xml.status_code == 200:
+            print('Все в норме!')
+        if get_xml.status_code == 404:
+            print('Страница не существует!')
+
+        response = json.loads(get_xml.text)
+        # print(response['Valute']['USD']['Value'])
+        # print(response['Valute']['EUR']['Value'])
+        date = response['Date'][:-15]
+        date_list = date.split('-')
+
+        usd = response['Valute']['USD']['Value']
+        eur = response['Valute']['EUR']['Value']
+        date = f'{date_list[2]}.{date_list[1]}.{date_list[0]}'
+        # print(usd)
+        # print(eur)
+        # print(date)
+        result = (usd, eur, date)
+        return result
+
+    api_result = get_api()
+    usd = api_result[0]
+    eur = api_result[1]
+    date = api_result[2]
 
     menucategory_table = MenuCategoryTable.objects.all()
     education_table = EducationTable.objects.all()
@@ -100,6 +130,9 @@ def index(request):
         'career_table': career_table,
         'addeducation_table': addeducation_table,
         'certificates_table': certificates_table,
+        'usd': usd,
+        'eur': eur,
+        'date': date,
     }
     return render(request, 'mainapp/index.html', context)
 
