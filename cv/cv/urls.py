@@ -22,8 +22,9 @@ from django.conf.urls.static import static
 
 urlpatterns = [
     re_path(r'^$', mainapp.index, name='index'),
-    re_path(r'^error/$', mainapp.error, name='error'),
+    # re_path(r'^error/$', mainapp.error, name='error'),
     path('admin/', admin.site.urls),
+    re_path(r'^\w+', mainapp.error, name='error'),
 ]
 
 

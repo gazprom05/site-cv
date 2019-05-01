@@ -2,7 +2,7 @@ from django.shortcuts import render
 from mainapp.models import MenuCategoryTable, EducationTable, CareerTable, AddEducationTable, CertificatesTable
 import requests
 import json
-
+import time
 
 # Create your views here.
 def index(request):
@@ -15,24 +15,13 @@ def index(request):
             print('Страница не существует!')
 
         response = json.loads(get_xml.text)
-        # print(response['Valute']['USD']['Value'])
-        # print(response['Valute']['EUR']['Value'])
-        date = response['Date'][:-15]
-        date_list = date.split('-')
-
         usd = response['Valute']['USD']['Value']
         eur = response['Valute']['EUR']['Value']
-        date = f'{date_list[2]}.{date_list[1]}.{date_list[0]}'
-        # print(usd)
-        # print(eur)
-        # print(date)
-        result = (usd, eur, date)
-        return result
+        date = time.strftime("%d.%m.%y:", time.localtime())
+        return usd, eur, date
 
-    api_result = get_api()
-    usd = api_result[0]
-    eur = api_result[1]
-    date = api_result[2]
+    usd, eur, date = get_api()
+
 
     menucategory_table = MenuCategoryTable.objects.all()
     education_table = EducationTable.objects.all()
