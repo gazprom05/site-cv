@@ -1,10 +1,12 @@
 <header>
   <div class="header_container">
-      <div class="api_cbrf">
-          Официальный куср  ЦБРФ на {{ date }}<br>
-          $  -  {{ usd }}₽<br>
-          €  -  {{ eur }}₽
-      </div>
+      {% if  date != 'Oops' %}
+          <div class="api_cbrf">
+                  Официальный куср  ЦБРФ на {{ date }}<br>
+                  $  -  {{ usd }}₽<br>
+                  €  -  {{ eur }}₽
+          </div>
+      {% endif %}
     <div class="welcome">
       <div class="welcome_head">
         Привет, это мой сайт-визитка

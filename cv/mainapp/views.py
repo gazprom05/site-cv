@@ -3,24 +3,29 @@ from mainapp.models import MenuCategoryTable, EducationTable, CareerTable, AddEd
 import requests
 import json
 import time
-
 # Create your views here.
+
 def index(request):
-    def get_api():
-        get_xml = requests.get(
-            'https://www.cbr-xml-daily.ru/daily_json.js')
-        if get_xml.status_code == 200:
-            print('Все в норме!')
-        if get_xml.status_code == 404:
-            print('Страница не существует!')
+    try:
+        def get_api():
+            get_xml = requests.get(
+                'https://www.cbr-xml-daily.ru/daily_json.js')
+            if get_xml.status_code == 200:
+                print('Все в норме!')
+            if get_xml.status_code == 404:
+                print('Страница не существует!')
 
-        response = json.loads(get_xml.text)
-        usd = response['Valute']['USD']['Value']
-        eur = response['Valute']['EUR']['Value']
-        date = time.strftime("%d.%m.%y:", time.localtime())
-        return usd, eur, date
+            response = json.loads(get_xml.text)
+            usd = response['Valute']['USD']['Value']
+            eur = response['Valute']['EUR']['Value']
+            date = time.strftime("%d.%m.%y:", time.localtime())
+            return usd, eur, date
 
-    usd, eur, date = get_api()
+        usd, eur, date = get_api()
+    except :
+        usd = eur = date = 'Oops'
+
+
 
 
     menucategory_table = MenuCategoryTable.objects.all()

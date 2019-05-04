@@ -32,29 +32,29 @@
       <div class="products_wrap">
 
 
-          {% for education_table in education_table %}
-                <div class="education_unit">
-                  <img src="/media/{{education_table.image}}" alt="ГБОУ Лицей №393">
-                  <div class="education_name">
-                    {{education_table.name}}
-                  </div>
-                  <div class="education_date">
-                    {{education_table.dates}}
-                  </div>
-                </div>
-          {% endfor %}
+          <!--{% for education_table in education_table %}-->
+                <!--<div class="education_unit">-->
+                  <!--<img src="/media/{{education_table.image}}" alt="ГБОУ Лицей №393">-->
+                  <!--<div class="education_name">-->
+                    <!--{{education_table.name}}-->
+                  <!--</div>-->
+                  <!--<div class="education_date">-->
+                    <!--{{education_table.dates}}-->
+                  <!--</div>-->
+                <!--</div>-->
+          <!--{% endfor %}-->
 
-        <!--{% for edu_agency in edu_agency %}-->
-            <!--<div class="education_unit">-->
-              <!--<img src="{{edu_agency.edu_agency_logo}}" alt="ГБОУ Лицей №393">-->
-              <!--<div class="education_name">-->
-                <!--{{edu_agency.edu_agency_name}}-->
-              <!--</div>-->
-              <!--<div class="education_date">-->
-                <!--{{edu_agency.edu_agency_years}}-->
-              <!--</div>-->
-            <!--</div>-->
-        <!--{% endfor %}-->
+        {% for edu_agency in edu_agency %}
+            <div class="education_unit">
+              <img src="{{edu_agency.edu_agency_logo}}" alt="ГБОУ Лицей №393">
+              <div class="education_name">
+                {{edu_agency.edu_agency_name}}
+              </div>
+              <div class="education_date">
+                {{edu_agency.edu_agency_years}}
+              </div>
+            </div>
+        {% endfor %}
 
       </div>
 
