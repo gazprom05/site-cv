@@ -20,15 +20,10 @@ import mainapp.views as mainapp
 from django.conf import settings
 from django.conf.urls.static import static
 
-urlpatterns = [
+urlpatterns = static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT) + \
+              [
     re_path(r'^$', mainapp.index, name='index'),
     # re_path(r'^error/$', mainapp.error, name='error'),
     path('admin/', admin.site.urls),
     re_path(r'^\w+', mainapp.error, name='error'),
 ]
-
-
-
-
-if settings.DEBUG:
-    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

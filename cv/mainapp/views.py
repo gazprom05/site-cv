@@ -118,7 +118,7 @@ def index(request):
         'edu_agency': edu_agency,
         'career': career,
         'add_education': add_education,
-        'certificates': certificates,
+
         'menucategory_table': menucategory_table,
         'education_table': education_table,
         'career_table': career_table,

@@ -32,29 +32,29 @@
       <div class="products_wrap">
 
 
-          <!--{% for education_table in education_table %}-->
-                <!--<div class="education_unit">-->
-                  <!--<img src="/media/{{education_table.image}}" alt="ГБОУ Лицей №393">-->
-                  <!--<div class="education_name">-->
-                    <!--{{education_table.name}}-->
-                  <!--</div>-->
-                  <!--<div class="education_date">-->
-                    <!--{{education_table.dates}}-->
-                  <!--</div>-->
-                <!--</div>-->
-          <!--{% endfor %}-->
+          {% for education_table in education_table %}
+                <div class="education_unit">
+                  <img src="{{education_table.image.url}}" alt="ГБОУ Лицей №393">
+                  <div class="education_name">
+                    {{education_table.name}}
+                  </div>
+                  <div class="education_date">
+                    {{education_table.dates}}
+                  </div>
+                </div>
+          {% endfor %}
 
-        {% for edu_agency in edu_agency %}
-            <div class="education_unit">
-              <img src="{{edu_agency.edu_agency_logo}}" alt="ГБОУ Лицей №393">
-              <div class="education_name">
-                {{edu_agency.edu_agency_name}}
-              </div>
-              <div class="education_date">
-                {{edu_agency.edu_agency_years}}
-              </div>
-            </div>
-        {% endfor %}
+        <!--{% for edu_agency in edu_agency %}-->
+            <!--<div class="education_unit">-->
+              <!--<img src="{{edu_agency.edu_agency_logo}}" alt="ГБОУ Лицей №393">-->
+              <!--<div class="education_name">-->
+                <!--{{edu_agency.edu_agency_name}}-->
+              <!--</div>-->
+              <!--<div class="education_date">-->
+                <!--{{edu_agency.edu_agency_years}}-->
+              <!--</div>-->
+            <!--</div>-->
+        <!--{% endfor %}-->
 
       </div>
 
@@ -69,7 +69,7 @@
 
           {% for career_table in career_table %}
           <div class="career_unit">
-            <img src="/media/{{career_table.image}}" alt="Эдвенче">
+            <img src="{{career_table.image.url}}" alt="Фирма">
             <div class="career_name">
               {{career_table.name}}<br>
               Должность:   {{career_table.position}}
@@ -108,7 +108,7 @@
 
           {% for addeducation_table in addeducation_table %}
                 <div class="add_edu_unit">
-                  <img src="/media/{{addeducation_table.image}}" alt="Solidcam">
+                  <img src="{{addeducation_table.image.url}}" alt="Solidcam">
                   <div class="add_edu_name">
                       {{addeducation_table.description}}
                   </div>
@@ -142,8 +142,8 @@
 
           {% for certificates_table in certificates_table %}
             <div class="cert_unit">
-              <a href="/media/{{certificates_table.image}}" target="_blank">
-                <img src="/media/{{certificates_table.image}}" alt="Основы программирования">
+              <a href="{{certificates_table.image.url}}" target="_blank">
+                <img src="{{certificates_table.image.url}}" alt="Основы программирования">
               </a>
               <div class="cert_name">
                 {{certificates_table.name}}
