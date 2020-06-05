@@ -1,5 +1,5 @@
 Counter==1.0.0
-Django==2.1.2
+Django==2.2.13
 psycopg2==2.8.2
 requests==2.20.0
 tests==0.7
